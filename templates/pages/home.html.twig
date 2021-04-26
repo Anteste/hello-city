@@ -2,7 +2,15 @@
 
 {% block body %}
 
-<h1>Hello from Casablanca</h1>
+    <h1>Hello from Casablanca</h1>
 
+    <p>It's currently {{ 'now'|date("H:m") }}</p>
+
+    <footer>
+        <p>
+        © Copryright {{ 'now'|date("Y") }}
+        &middot; <a href="#">About us</a>
+        </p>
+    </footer>
 {% endblock %}
 
