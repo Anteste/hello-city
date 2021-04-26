@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About us | ~ {{ parent() }}{% endblock %}
+
+{% block body %}
+    <img src="{{ asset('/img/Anteste.jpeg') }}" alt="Anteste Picture Image" width="200" class='rounded shadow-lg mt-8'>
+
+    <h1 class="my-8 text-2xl text-gray-800">Built with <span class="text-pink-500">❤</span>by Anteste.</h1>
+
+    <p><a href="{{ path('app_home') }}" class="text-red-600 hover:text-blue-700 underline">Back on homepage</a></p>
+{% endblock %}

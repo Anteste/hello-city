@@ -1,16 +1,10 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+    <img src="{{ asset('/img/MA.png') }}" alt="Morocco Flag" width=300 class="h-48 mt-5 rounded shadow-md">
 
-    <h1>Hello from Casablanca</h1>
+    <h1 class='my-9 text-3xl sm:text-6xl font-semibold text-red-700'>Hello from Casablanca</h1>
 
-    <p>It's currently {{ 'now'|date("H:m") }}</p>
-
-    <footer>
-        <p>
-        © Copryright {{ 'now'|date("Y") }}
-        &middot; <a href="#">About us</a>
-        </p>
-    </footer>
+    <p class='text-xl text-gray-700'>It's currently {{ 'now'|date("H:m") }}</p>
 {% endblock %}
 
