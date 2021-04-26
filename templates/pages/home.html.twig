@@ -1,10 +1,20 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <img src="{{ asset('/img/MA.png') }}" alt="Morocco Flag" width=300 class="h-48 mt-5 rounded shadow-md">
 
-    <h1 class='my-9 text-3xl sm:text-6xl font-semibold text-red-700'>Hello from Casablanca</h1>
+        <img src="{{ asset('/img/MA.png') }}" alt="Morocco Flag" width=300 class="h-48 mt-5 rounded shadow-md">
 
-    <p class='text-xl text-gray-700'>It's currently {{ 'now'|date("h:i A") }}</p>
+        <h1 class='my-9 text-3xl sm:text-6xl font-semibold text-red-700'>Hello from Casablanca</h1>
+        
+        <p class='text-xl text-gray-700' id="clock">It's currently {{ 'now'|date("h:i:s A") }}</p>
+
 {% endblock %}
-
+{% block javascripts %}
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $("#clock").load(window.location.href + " #clock" );
+        }, 1000);
+    });  
+</script>
+{% endblock %}
